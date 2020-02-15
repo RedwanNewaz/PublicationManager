@@ -1,0 +1,4 @@
+Pybtex
+beautifulsoup4
+requests
+tqdm

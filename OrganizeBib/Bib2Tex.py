@@ -84,7 +84,7 @@ def make_tex(input, output):
             file.write(writableTxt)
         logger.debug("[INFO] input = (%s) | output = (%s)" % (input, output))
     except:
-        logger.error("[ERROR] %s"%input)
+        logger.error("[ERROR] (%s) could not process"%input)
 
     # print(writableTxt)
 

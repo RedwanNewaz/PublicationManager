@@ -9,7 +9,7 @@ For docker platform, please visit [this](https://hub.docker.com/repository/docke
 ```
 python venv -m ./venv
 ```
-
+Please use the python and pip from the venv folder. 
 ### Install dependencies 
 ```
 pip install -r requirements.txt 

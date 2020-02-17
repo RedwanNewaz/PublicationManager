@@ -1,4 +1,6 @@
 output
 venv
+OrganizeBib/__pycache__/
 kavrakilab.bib
+PoPCites.bib
 .idea

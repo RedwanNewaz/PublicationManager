@@ -6,14 +6,14 @@ For docker platform, please visit [this](https://hub.docker.com/repository/docke
 ## How to build
 
 ### Build python virtual environment
-'''
+```
 python venv -m ./venv
-'''
+```
 
 ### Install dependencies 
-'''
+```
 pip install -r requirements.txt 
-'''
+```
 
 ## Supported arguments 
 * --file : a single bib file that contains all the information  

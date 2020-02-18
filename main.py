@@ -7,7 +7,7 @@ from glob import glob
 if __name__ == '__main__':
     parser = ArgumentParser()
     parser.add_argument('--file', type = str, required = True, help = "location of the bib file?")
-    parser.add_argument('--filterBy', type = str, default = "", help = "keep entries of author name?")
+    parser.add_argument('--filterBy',  default = "", nargs='+', help = "keep entries of author name?")
     parser.add_argument('--debug', action='store_true', default=False, help='show log in the console?')
     parser.add_argument('--recompile', action='store_true', default=False, help='recompiling existing bib files in output/splited_bib/ directory?')
 
@@ -24,9 +24,13 @@ if __name__ == '__main__':
 
     if(len(arg.filterBy)>0):
         # output folder check
-        os.makedirs("./ouput", exist_ok=True)
+        os.makedirs("output", exist_ok=True)
         #create output file name
-        output = "output/%s.bib"%arg.filterBy
+        name = arg.filterBy
+        print(name)
+        if(isinstance(name, list)):
+            name = "_".join(name)
+        output = "output/%s.bib"%name
         # run the filterBy function
         filterBy(input=input_file, output=output, name=arg.filterBy)
         # don't run other programs

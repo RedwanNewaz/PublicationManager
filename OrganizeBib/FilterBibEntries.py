@@ -16,7 +16,10 @@ def author_items(name, data):
         if(author):
             names = [unicode(person) for person in author]
             all_names = " ".join(names)
-            findName = re.search(name, all_names, re.IGNORECASE)
+            if(isinstance(name, list)):
+                findName = any([re.search(n, all_names, re.IGNORECASE) for n in name])
+            else:
+                findName = re.search(name, all_names, re.IGNORECASE)
             if( findName):
                 yield d
                 count += 1

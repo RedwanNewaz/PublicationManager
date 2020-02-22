@@ -1,6 +1,7 @@
 output
 venv
 OrganizeBib/__pycache__/
+DatabaseManger/__pycache__/
 kavrakilab.bib
 PoPCites.bib
 .idea
